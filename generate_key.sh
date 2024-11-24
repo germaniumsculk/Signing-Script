@@ -4,7 +4,7 @@ function keygen() {
     rm -rf "$certs_dir"
     mkdir -p "$certs_dir"
     local subject="/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=germaniumsculk@gmail.com"    
-    for key in bluetooth certs cyngn-app media networkstack platform releasekey sdk_sandbox shared testcert testkey verity; do
+    for key in bluetooth certs cyngn-app media networkstack nfc platform releasekey sdk_sandbox shared testcert testkey verity; do
         printf "\n\n" | ./development/tools/make_key "$certs_dir"/$key "$subject"
     done
 }
